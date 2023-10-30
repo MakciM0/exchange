@@ -1,0 +1,77 @@
+.shop {
+  height: 85vh;
+  background-color: #fff;
+
+  img {
+    width: 180px;
+    height: 180px;
+  }
+  h2 {
+    margin: 0;
+    margin-left: 50px;
+    padding-top: 10px;
+    font-size: 26px;
+    color: rgba(81, 1, 145, 1);
+    text-align: left;
+  }
+
+  .sections_title {
+    display: flex;
+    justify-content: space-around;
+
+    .active_title {
+      color: rgba(81, 1, 145, 1);
+    }
+  }
+
+  .active_section {
+    display: flex;
+
+    max-height: 85%;
+    overflow-x: scroll;
+
+    margin-top: 50px;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .car {
+      img {
+        width: 350px;
+        height: 130px;
+      }
+    }
+    .grocery:nth-child(5) img {
+      width: 100px;
+    }
+    .house {
+      img {
+        width: 240px;
+        height: 160px;
+      }
+    }
+
+    .entertainment {
+      padding-bottom: 50px;
+      text-align: center;
+      flex-direction: column;
+      img {
+        width: 800px;
+        height: 250px;
+        margin: 0 auto;
+      }
+    }
+    .entertainment:nth-child(3) img {
+      height: 500px;
+    }
+    .grocery,
+    .car,
+    .house {
+      text-align: center;
+    }
+  }
+
+  .section {
+    display: none;
+  }
+}

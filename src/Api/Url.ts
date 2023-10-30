@@ -1,0 +1,1 @@
+export const base_URL = 'https://api.coincap.io/v2/assets'

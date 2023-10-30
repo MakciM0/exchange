@@ -1,0 +1,18 @@
+.forbs {
+  position: relative;
+  button {
+    margin-top: 50px;
+  }
+
+  .list {
+    width: 400px;
+    position: absolute;
+    right: 384px;
+    top: 167px;
+    background-color: #f5f5f5;
+    border: 3px solid #1f0069;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 10px 0 0 0px;
+  }
+}

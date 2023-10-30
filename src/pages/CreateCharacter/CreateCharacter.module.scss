@@ -1,0 +1,121 @@
+.create_character {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  background: rgb(81, 1, 145);
+  background: linear-gradient(90deg, rgba(81, 1, 145, 1) 0%, rgba(0, 113, 136, 1) 100%);
+  color: #f5f5f5;
+
+  .modal {
+    display: none;
+  }
+  .modal_animation {
+    position: absolute;
+    right: 30vw;
+    display: block;
+    animation-name: not-selected;
+    animation-duration: 3.5s;
+    animation-iteration-count: 1;
+    font-size: 20px;
+  }
+
+  .title {
+    text-transform: uppercase;
+    color: #be0000;
+  }
+  .name {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: 20px;
+    }
+    input {
+      width: 200px;
+      margin: 10px auto;
+      border: none;
+      border-radius: 10px;
+      padding: 5px 10px;
+      outline: none;
+    }
+  }
+  .photos {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+
+    span {
+      font-size: 20px;
+    }
+    .imgs {
+      display: flex;
+      justify-content: space-between;
+      width: 35%;
+      margin: 10px auto;
+      flex-wrap: wrap;
+
+      img {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      img:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .difficult {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 20px;
+    }
+    .difficult_label {
+      display: flex;
+      margin: 5px auto;
+      width: 150px;
+      justify-content: space-between;
+      position: relative;
+
+      span {
+        background-color: #fff;
+        color: #be0000;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+      .prompt {
+        display: none;
+        width: 200px;
+        position: absolute;
+        left: 200px;
+        bottom: -70px;
+      }
+      span:hover ~ .prompt {
+        display: block;
+      }
+    }
+  }
+  button {
+    margin-top: 40px;
+    font-size: 20px;
+  }
+}
+
+@keyframes not-selected {
+  0% {
+    right: 40vh;
+  }
+  50% {
+    right: 50vh;
+  }
+  100% {
+    right: 40vh;
+  }
+}

@@ -1,0 +1,61 @@
+.actions {
+  display: flex;
+  position: relative;
+  width: 500px;
+  font-size: 20px;
+  
+  .activeBlocks { //Отображение текущих действий игрока(заполненные)
+    $i: 1;
+    @while $i < 9 { //Определяем где должны находиться блоки действий
+      $margin: 96;
+      // Можно добавить цикл
+      @if ($i == 2) {
+        $margin: $margin + 50;
+      }
+      @if ($i == 3) {
+        $margin: $margin + 100;
+      }
+      @if ($i == 4) {
+        $margin: $margin + 150;
+      }
+      @if ($i == 5) {
+        $margin: $margin + 200;
+      }
+      @if ($i == 6) {
+        $margin: $margin + 250;
+      }
+      @if ($i == 7) {
+        $margin: $margin + 300;
+      }
+      @if ($i == 8) {
+        $margin: $margin + 350;
+      } //цикл
+
+      :nth-child(#{$i}) {
+        background-color: #eeddd6;
+        position: absolute;
+        left: #{$margin}px;
+        $i: $i + 1;
+      }
+    }
+
+    .numberBlocks {
+      width: 30px;
+      height: 20px;
+      background: #eeddd6;
+      color: #eeddd6;
+      position: absolute;
+    }
+  }
+
+  span {
+    width: 30px;
+    height: 20px;
+    background: #f5f5f5;
+    color: #f5f5f5;
+    margin: 0 10px;
+    border: 2px solid #eeddd6;
+    border-radius: 20px;
+    //F5F5F5
+  }
+}

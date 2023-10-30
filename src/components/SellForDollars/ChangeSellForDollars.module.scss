@@ -1,0 +1,72 @@
+.sell{
+  display: flex;
+  justify-content: space-around;
+  
+  font-size: 20px;
+  input{
+    height: 20px;
+    font-size: 20px;
+    background-color: #F5F5F5;
+    border: 1px solid black ;
+    border-radius: 10px;
+    padding: 0 5px;
+    max-width: 200px;
+  }
+  p{
+    font-size: 20px;
+    max-width: 200px;
+    overflow: hidden;
+    padding: 0 5px;
+  }
+
+  .changeDollars, .changeUnits{
+    display: flex;
+    flex-direction: column;
+    p{
+      background-color: #F5F5F5;
+      border: 1px solid black ;
+      border-radius: 10px;
+    }
+    input{
+      height: 24px;
+      padding: 0 5px;
+    }
+  }
+  .changeDollars{
+    input{
+      margin-top: 22px;
+    }
+  }
+
+  .currencies{
+    max-width: 300px;
+    word-wrap: break-word;
+    
+    input{
+      margin-top: 44px;
+      width: 100%;
+      padding: 0 5px;
+      height: 24px;
+      
+    }
+    .currencies_list{
+      margin-top: 16px;
+      width: 450px;
+      height: 300px;
+      overflow-x: scroll;
+      
+      .currency{
+        display: flex;
+        border: 1px solid black ;
+        justify-content: space-between;
+        p{
+          font-size: 15px;
+        }
+      }
+    } 
+  }
+  .sell_button{
+    margin-top: 40px;
+    height: 40px;
+  }
+}

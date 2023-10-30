@@ -1,0 +1,25 @@
+.latestPage {
+  height: 85vh;
+
+  background-color: #fff;
+
+  h2 {
+    margin: 0;
+    margin-left: 50px;
+    padding-top: 10px;
+    font-size: 26px;
+    color: rgba(81, 1, 145, 1);
+  }
+  .title {
+    text-align: center;
+
+    span {
+      margin: 50px;
+      padding-bottom: 10px;
+    }
+  }
+  .currencies {
+    max-height: 90%;
+    overflow-x: scroll;
+  }
+}

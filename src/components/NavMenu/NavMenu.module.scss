@@ -1,0 +1,20 @@
+.NavMenu {
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5vh;
+  background-color: whitesmoke;
+
+  a {
+    text-decoration: none;
+    color: rgb(81, 1, 145);
+    padding: 10px;
+    transition: 0.3s;
+  }
+  a:hover {
+    color: #be0000;
+  }
+}

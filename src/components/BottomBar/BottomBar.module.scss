@@ -1,0 +1,35 @@
+.bottomBar {
+  background-color: whitesmoke;
+  width: 100vw;
+  height: 10vh;
+  border-top: 3px solid #1f0069;
+  overflow-x: hidden;
+
+  .carousel {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-top: 20px;
+
+    animation-name: currencies_bottom;
+    animation-duration: 180s;
+    animation-iteration-count: infinite;
+
+    span {
+      margin-left: 4px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@keyframes currencies_bottom {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: 515%;
+  }
+  100% {
+    right: 0%;
+  }
+}

@@ -1,0 +1,64 @@
+.change {
+  margin-top: 40px;
+  font-size: 20px;
+  input {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 0px 10px;
+    border: 1px solid black;
+  }
+  input,
+  span {
+    font-size: 20px;
+  }
+  .currencies_wrapper {
+    display: flex;
+    justify-content: space-around;
+    span {
+      margin-top: 20px;
+    }
+    .user_currencies {
+      margin-top: 20px;
+      .currencies_list {
+        overflow: scroll;
+        max-height: 200px;
+        .currency {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    .currencies {
+      position: relative;
+      padding-top: 18px;
+      .currencies_list {
+        position: absolute;
+        overflow-y: scroll;
+        max-height: 300px;
+        background-color: #f5f5f5;
+        .currency {
+          display: flex;
+          border: 1px solid black;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+  .amount {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 200px;
+    p {
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 0 5px;
+      position: relative;
+      bottom: 18px;
+    }
+  }
+  .button {
+    text-align: center;
+    margin-top: 50px;
+  }
+}

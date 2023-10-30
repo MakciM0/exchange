@@ -1,0 +1,22 @@
+.wallet {
+  height: 85vh;
+  text-align: center;
+  font-size: 18px;
+  overflow-x: scroll;
+  background-color: #fff;
+  h2 {
+    margin: 0;
+    margin-left: 50px;
+    padding-top: 10px;
+    font-size: 26px;
+    color: rgba(81, 1, 145, 1);
+    text-align: left;
+  }
+  .currency {
+    display: flex;
+    justify-content: center;
+    p {
+      margin: 10px 10px;
+    }
+  }
+}
