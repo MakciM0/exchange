@@ -171,7 +171,11 @@ const GameSlice = createSlice({
         }
       })
       state.wallet.forEach((item, index) => {//Изменение цены в кошельке игрока
-        item.priceUsd = state.currencies[index].priceUsd
+        let isFind = state.currencies.find((el) => el.id === item.id)
+        if(isFind){
+          item.priceUsd = isFind?.priceUsd
+        }
+        // item.priceUsd = state.currencies[index].priceUsd
       })
       state.forbs.forEach((item) => {// Изменения Форбс
         let change = Math.random()
