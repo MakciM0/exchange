@@ -18,15 +18,12 @@ const Main: FC<MainProps> = () => {
 
   const dispatch = useAppDispatch()
 
-  const currencies = useAppSelector((state) => state.exchange.currencies)
-
   useEffect(() => {
     const fetchData = async () => {
       try {
         await axios.get(base_URL).then((response) => {
           dispatch(SetCurrencies(response.data.data))
           setIsLoading(true)
-          console.log(currencies)
         })
       } catch (err) {
         console.error(err)
@@ -48,7 +45,7 @@ const Main: FC<MainProps> = () => {
                 создал для практики в создание сайтов. Этот сайт написан на
                 React + Typescript. Состояния хранятся в Redux. Запросы на
                 сервер отправляются с помощью Axios. Стили написаны на Scss. Код
-                проекта можно посмотреть на github.<a href="">ссылка</a>
+                проекта можно посмотреть на github.<a href="https://github.com/MakciM0/exchange">ссылка</a>
               </p>
             </div>
             <div className={styles.rules}>

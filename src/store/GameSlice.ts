@@ -175,7 +175,6 @@ const GameSlice = createSlice({
         if(isFind){
           item.priceUsd = isFind?.priceUsd
         }
-        // item.priceUsd = state.currencies[index].priceUsd
       })
       state.forbs.forEach((item) => {// Изменения Форбс
         let change = Math.random()
