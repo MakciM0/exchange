@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useState, useEffect } from 'react'
 
 import { useAppSelector } from '../../store/AppHooks'
 
@@ -14,6 +14,10 @@ const ChangePage: FC<ChangePageProps> = () => {
 
   const wallet = useAppSelector((state) => state.exchange.wallet)
   const currencies = useAppSelector((state) => state.exchange.currencies)
+
+  useEffect(() => {
+    document.title = "Обмен валюты";
+  }, []);
 
   return (
     <div className={styles.changePage}>

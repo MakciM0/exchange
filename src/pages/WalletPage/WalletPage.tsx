@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { useAppSelector } from '../../store/AppHooks'
 
 import styles from './WalletPage.module.scss'
@@ -11,6 +11,10 @@ const WalletPage: FC<WalletPageProps> = () => {
   )
   const wallet = useAppSelector((state) => state.exchange.wallet)
   const dollars = useAppSelector((state) => state.exchange.dollars)
+
+  useEffect(() => {
+    document.title = "Кошелёк";
+  }, []);
 
   return (
     <div className={styles.wallet}>

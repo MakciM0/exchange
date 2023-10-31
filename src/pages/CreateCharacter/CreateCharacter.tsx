@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useState, useEffect } from 'react'
 import { ImgCharacter } from '../../const/const'
 
 import { useAppDispatch } from '../../store/AppHooks'
@@ -23,7 +23,8 @@ const CreateCharacter: FC<CreateCharacterProps> = () => {
     if (userName && difficult && userPhoto) {
       dispatch(StartGame([e, userName, userPhoto, difficult]))
     }
-    if (!userName) { //Анимация если не выбрано
+    if (!userName) {
+      //Анимация если не выбрано
       setSelectedName(true)
       setTimeout(() => {
         setSelectedName(false)
@@ -42,6 +43,10 @@ const CreateCharacter: FC<CreateCharacterProps> = () => {
       }, 3000)
     }
   }
+
+  useEffect(() => {
+    document.title = 'Создание персонажа'
+  }, [])
 
   return (
     <div className={styles.create_character}>

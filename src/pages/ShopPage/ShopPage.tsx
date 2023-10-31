@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useState, useEffect } from 'react'
 
 import { TShop } from '../../types/types'
 
@@ -31,6 +31,10 @@ const ShopPage: FC<ShopPageProps> = () => {
       dispatch(BuyItemInShop(itemShop))
     }
   }
+
+  useEffect(() => {
+    document.title = "Магазин";
+  }, []);
 
   return (
     <div className={styles.shop}>

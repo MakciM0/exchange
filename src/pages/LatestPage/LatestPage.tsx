@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 
 import { useAppSelector } from '../../store/AppHooks'
 
@@ -13,6 +13,10 @@ const LatestPage: FC<LatestPageProps> = () => {
     (state) => state.exchange.prevCurrencies
   )
   const currencies = useAppSelector((state) => state.exchange.currencies)
+
+  useEffect(() => {
+    document.title = "Стоимость валют";
+  }, []);
 
   return (
     <div className={styles.latestPage}>

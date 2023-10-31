@@ -32,6 +32,10 @@ const Main: FC<MainProps> = () => {
     fetchData()
   }, [isLoading])
 
+  useEffect(() => {
+    document.title = "Главное меню";
+  }, []);
+
   return (
     <div className={styles.main}>
       <Logo></Logo>

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { useAppSelector } from '../../store/AppHooks'
 
 import styles from './PersonPage.module.scss'
@@ -12,6 +12,10 @@ const PersonPage: FC<PersonPageProps> = () => {
     (state) => state.exchange.characterItems
   )
   const needs = useAppSelector((state) => state.exchange.needs)
+
+  useEffect(() => {
+    document.title = "Персонаж";
+  }, []);
 
   return (
     <div className={styles.person_page}>
